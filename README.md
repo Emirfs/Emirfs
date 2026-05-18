@@ -17,22 +17,11 @@ struct Developer {
     char  username[]     = "Emirfs";
     char  focus[]        = "Embedded Systems & Low-Level Programming";
     char  languages[]    = "C, Python, VHDL, Dart, TypeScript";
-    char  hardware[]     = "STM32, Arduino, Raspberry Pi";
+    char  hardware[]     = "STM32, Arduino, ESP32";
     bool  coffee         = true;
     bool  open_to_collab = true;
 };
 ```
-
-- 🎓 Yazılım / Bilişim alanında öğrenciyim
-- 🔌 STM32 üzerinde gömülü sistemler, bootloader ve RF OTA firmware geliştiriyorum
-- 🛰️ STPM bootloader ekosistemi: kablosuz firmware güncelleme & uploader köprüsü
-- 🔐 FPGA tarafında VHDL ile AES-256 donanım implementasyonu yaptım
-- 📱 Yan tarafta Dart/Flutter ve TypeScript ile uygulama/web geliştiriyorum
-- 🌱 Şu an: Mikrodenetleyiciler, RTOS ve C ile derinleşiyorum
-- 💬 Bana şunları sorabilirsin: **C, STM32, Bootloaders, Embedded Systems**
-- ⚡ Eğlenceli bilgi: Kod yazmadan önce mutlaka kahve içerim ☕
-
----
 
 ## 🛠️ Tech Stack
 
@@ -117,7 +106,9 @@ struct Developer {
 
 <div align="center">
 
-*"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — Martin Fowler
+*"AI won't replace programmers, but programmers who use AI will replace those who don't."* — Santiago Valdarrama
+
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,100:0e75b6&height=100&section=footer" />
 
