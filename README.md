@@ -40,7 +40,7 @@
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-Emirfs-181717?style=for-the-badge&logo=github)](https://github.com/Emirfs)
-[![Email](https://img.shields.io/badge/Email-emir.furkan064%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@emirfurkansari.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@emirfurkansari.com)
 
 </div>
 
