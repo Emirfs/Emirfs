@@ -8,25 +8,6 @@
 </div>
 
 ---
-
-## 🧠 About Me
-
-```c
-struct Developer {
-    char  name[]         = "Emir Furkan Sarı";
-    char  username[]     = "Emirfs";
-    char  focus[]        = "Embedded Systems & Low-Level Programming";
-    char  languages[]    = "C, Python, VHDL, Dart, TypeScript";
-    char  hardware[]     = "STM32, Arduino, ESP32";
-    bool  coffee         = true;
-    bool  open_to_collab = true;
-};
-```
-
----
-
-## 📊 GitHub Stats
-
 <div align="center">
 
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Emirfs&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
@@ -41,8 +22,6 @@ struct Developer {
 </div>
 
 ---
-
-## 🪙 AI Token Usage
 
 <div align="center">
 
@@ -61,7 +40,7 @@ struct Developer {
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-Emirfs-181717?style=for-the-badge&logo=github)](https://github.com/Emirfs)
-[![Email](https://img.shields.io/badge/Email-emir.furkan064%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emir.furkan064@gmail.com)
+[![Email](https://img.shields.io/badge/Email-emir.furkan064%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@emirfurkansari.com)
 
 </div>
 
