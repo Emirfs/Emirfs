@@ -23,28 +23,9 @@ struct Developer {
 };
 ```
 
-- 🎓 Yazılım / Bilişim alanında öğrenciyim
-- 🔌 STM32 üzerinde gömülü sistemler, bootloader ve RF OTA firmware geliştiriyorum
-- 🛰️ STPM bootloader ekosistemi: kablosuz firmware güncelleme & uploader köprüsü
-- 🔐 FPGA tarafında VHDL ile AES-256 donanım implementasyonu yaptım
-- 📱 Yan tarafta Dart/Flutter ve TypeScript ile uygulama/web geliştiriyorum
-- 🌱 Şu an: Mikrodenetleyiciler, RTOS ve C ile derinleşiyorum
-- 💬 Bana şunları sorabilirsin: **C, STM32, Bootloaders, Embedded Systems**
-- ⚡ Eğlenceli bilgi: Kod yazmadan önce mutlaka kahve içerim ☕
-
----
-
 ## 🛠️ Tech Stack
 
 <div align="center">
-
-**Diller**
-
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![VHDL](https://img.shields.io/badge/VHDL-235A9F?style=for-the-badge&logo=v&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 **Platformlar & Araçlar**
 
@@ -75,18 +56,6 @@ struct Developer {
 
 </div>
 
----
-
-## 🚀 Projects
-
-| Proje | Açıklama | Teknolojiler |
-|-------|----------|--------------|
-| [🛰️ FirmwareUpdate_RF](https://github.com/Emirfs/FirmwareUpdate_RF) | STM32 için RF üzerinden OTA firmware güncelleme | C, RF, STM32 |
-| [🔌 stpm_bootloader](https://github.com/Emirfs/stpm_bootloader) | STPM kart için özel bootloader | C, STM32 |
-| [📡 Bootloader-Sender](https://github.com/Emirfs/Bootloader-Sender) | STPM bootloader ekosistemi için RF OTA gönderici/uploader köprüsü | C, RF |
-| [🔐 AES256_vhdl](https://github.com/Emirfs/AES256_vhdl) | AES-256 şifreleme donanım implementasyonu | VHDL, FPGA |
-| [👆 Fingerprint Attendance](https://github.com/Emirfs/Fingerprint_Attendance_system) | STM32 ile parmak izi yoklama sistemi | C, STM32 |
-| [🤖 WID](https://github.com/Emirfs/WID) | STM32 geliştirme için Claude Code agent sistemi | Tooling |
 
 ---
 
