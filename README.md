@@ -145,7 +145,7 @@ Every project above was built together with AI coding agents. This is how much I
 <div align="center">
 <img src="./assets/ai-usage.svg" alt="AI token usage by coding agent" width="100%" />
 
-<a href="https://tokscale.ai/u/Emirfs"><img src="https://tokscale.ai/api/embed/Emirfs/svg?template=classic&color=teal&graph=1&rank=percent" alt="Tokscale live stats" width="100%" /></a>
+<a href="https://tokscale.ai/u/Emirfs"><img src="https://tokscale.ai/api/embed/Emirfs/svg?template=classic&color=teal&graph=1" alt="Tokscale live stats" width="100%" /></a>
 </div>
 
 ## Tech stack
