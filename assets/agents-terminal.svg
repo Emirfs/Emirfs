@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="320" viewBox="0 0 860 320" role="img" aria-label="Animated terminal: AI agents working on a firmware project">
+<style>text{font-family:'SF Mono',Consolas,'Liberation Mono',monospace;font-size:14px}.p{fill:#3FB950}.c{fill:#E6EDF3}@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s steps(1) infinite}@keyframes l0{0%,2.50%{opacity:0}2.51%,94%{opacity:1}100%{opacity:0}}@keyframes w0{0%,2.50%{width:0}12.50%,100%{width:328px}}@keyframes l1{0%,14.69%{opacity:0}14.70%,94%{opacity:1}100%{opacity:0}}@keyframes l2{0%,17.50%{opacity:0}17.51%,94%{opacity:1}100%{opacity:0}}@keyframes l3{0%,20.31%{opacity:0}20.32%,94%{opacity:1}100%{opacity:0}}@keyframes l4{0%,23.13%{opacity:0}23.14%,94%{opacity:1}100%{opacity:0}}@keyframes w4{0%,23.13%{width:0}33.75%,100%{width:346px}}@keyframes l5{0%,35.94%{opacity:0}35.95%,94%{opacity:1}100%{opacity:0}}@keyframes l6{0%,38.75%{opacity:0}38.76%,94%{opacity:1}100%{opacity:0}}@keyframes w6{0%,38.75%{width:0}50.94%,100%{width:391px}}@keyframes l7{0%,53.13%{opacity:0}53.14%,94%{opacity:1}100%{opacity:0}}</style>
+<rect width="860" height="320" rx="14" fill="#0D1117"/>
+<rect x=".5" y=".5" width="859" height="319" rx="13.5" fill="none" stroke="#30363D"/>
+<circle cx="28" cy="26" r="6" fill="#FF5F57"/><circle cx="48" cy="26" r="6" fill="#FEBC2E"/><circle cx="68" cy="26" r="6" fill="#28C840"/>
+<text x="430.0" y="31" text-anchor="middle" fill="#8B96A8" style="font-size:13px">emir@lab — agents</text>
+<line x1="0" y1="46" x2="860" y2="46" stroke="#21262D"/>
+<clipPath id="k0"><rect x="32" y="54" height="24" width="0" style="animation:w0 16.0s steps(32) infinite"/></clipPath>
+<g style="animation:l0 16.0s linear infinite" clip-path="url(#k0)"><text x="32" y="72"><tspan class="p">❯ </tspan><tspan class="c">conclave board open firmware-ota</tspan></text></g>
+<g style="animation:l1 16.0s linear infinite"><text x="50" y="98" xml:space="preserve"><tspan fill="#D97757">claude </tspan><tspan fill="#8B96A8">  planning  </tspan><tspan fill="#E6EDF3">bootloader resume after power loss</tspan></text></g>
+<g style="animation:l2 16.0s linear infinite"><text x="50" y="124" xml:space="preserve"><tspan fill="#10A37F">codex  </tspan><tspan fill="#8B96A8">  reviewing </tspan><tspan fill="#E6EDF3">rf_protocol.h frame layout</tspan></text></g>
+<g style="animation:l3 16.0s linear infinite"><text x="50" y="150" xml:space="preserve"><tspan fill="#4E8CF7">gemini </tspan><tspan fill="#8B96A8">  drafting  </tspan><tspan fill="#E6EDF3">Si4463 radio notes</tspan></text></g>
+<clipPath id="k4"><rect x="32" y="158" height="24" width="0" style="animation:w4 16.0s steps(34) infinite"/></clipPath>
+<g style="animation:l4 16.0s linear infinite" clip-path="url(#k4)"><text x="32" y="176"><tspan class="p">❯ </tspan><tspan class="c">mnemo recall "dual-slot flash map"</tspan></text></g>
+<g style="animation:l5 16.0s linear infinite"><text x="50" y="202" xml:space="preserve"><tspan fill="#22C3D8">recall </tspan><tspan fill="#E6EDF3">  3 notes from past sessions injected</tspan></text></g>
+<clipPath id="k6"><rect x="32" y="210" height="24" width="0" style="animation:w6 16.0s steps(39) infinite"/></clipPath>
+<g style="animation:l6 16.0s linear infinite" clip-path="url(#k6)"><text x="32" y="228"><tspan class="p">❯ </tspan><tspan class="c">make flash &amp;&amp; ota push --target STPM_FC</tspan></text></g>
+<g style="animation:l7 16.0s linear infinite"><text x="50" y="254" xml:space="preserve"><tspan fill="#3FB950">ok     </tspan><tspan fill="#E6EDF3">  build · flash · 412 frames sent · CRC verified</tspan></text></g>
+<rect class="cur" x="32" y="265" width="9" height="18" fill="#E6EDF3"/>
+</svg>
