@@ -58,7 +58,6 @@ and I build tools that let AI coding agents work on real hardware and real codeb
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Emirfs&show_icons=true&theme=github_dark&include_all_commits=true&count_private=true&hide_border=true&hide_title=true" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Emirfs&layout=compact&langs_count=6&theme=github_dark&hide_border=true" alt="Top languages" />
+<img src="https://streak-stats.demolab.com?user=Emirfs&theme=github-dark-blue&hide_border=true&background=0D1117" alt="GitHub contribution streak" />
 
 </div>
