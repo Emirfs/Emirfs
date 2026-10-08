@@ -99,7 +99,7 @@ Autonomous AI and frontier-tech journal. Hourly dispatches, trending open-source
 Every project above was built together with AI coding agents. This is how much I have used each of them, by model vendor.
 
 <div align="center">
-<img src="./assets/ai-usage.svg" alt="AI token usage by model vendor" width="100%" />
+<img src="./assets/ai-usage.svg?v=20261008" alt="AI token usage by model vendor" width="100%" />
 </div>
 
 ## Tech stack
