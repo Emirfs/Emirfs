@@ -109,13 +109,18 @@ def tokscale_graph(since: str, home: Path | None, client: str | None) -> list[di
 
 
 def merged_omp_home(root: Path) -> Path:
-    """Copy every Oh My Pi profile's sessions under one fake home."""
+    """Copy every Oh My Pi profile's sessions under one fake home.
+
+    Retired profiles live in ~/.omp/profiles-arsiv; they still count.
+    """
     omp = Path.home() / ".omp"
     dst = root / ".omp" / "agent" / "sessions"
     sources = {"default": omp / "agent" / "sessions"}
-    profiles = omp / "profiles"
-    if profiles.is_dir():
-        for p in profiles.iterdir():
+    for folder in ("profiles", "profiles-arsiv"):
+        base = omp / folder
+        if not base.is_dir():
+            continue
+        for p in base.iterdir():
             if (p / "agent" / "sessions").is_dir():
                 sources[p.name] = p / "agent" / "sessions"
     for name, src in sources.items():

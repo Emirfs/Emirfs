@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:0E4C63,100:22C3D8&height=200&section=header&text=Emir%20Furkan%20Sar%C4%B1&fontSize=46&fontColor=E6EDF3&animation=fadeIn&fontAlignY=36&desc=Embedded%20Systems%20%C2%B7%20AI%20Agent%20Tooling&descAlignY=58&descSize=18" alt="Emir Furkan Sarı" width="100%" />
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=22C3D8&center=true&vCenter=true&width=640&lines=I+build+systems+where+AI+agents+do+real+work;Multi-agent+orchestration+%C2%B7+LLM+memory+%C2%B7+agent+daemons;STM32+firmware+%C2%B7+secure+RF+OTA+%C2%B7+bootloaders;8%2B+billion+tokens+across+Claude%2C+Codex+and+Gemini" alt="Typing intro" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=22C3D8&center=true&vCenter=true&width=640&lines=I+build+systems+where+AI+agents+do+real+work;Multi-agent+orchestration+%C2%B7+LLM+memory+%C2%B7+agent+daemons;STM32+firmware+%C2%B7+secure+RF+OTA+%C2%B7+bootloaders;10%2B+billion+tokens+across+Claude%2C+Codex+and+Gemini" alt="Typing intro" /></a>
 
 [![Website](https://img.shields.io/badge/emirfurkansari.com-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22C3D8)](https://www.emirfurkansari.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/emirfurkansar%C4%B1/)
