@@ -21,7 +21,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="32" y="132" class="kl">TOTAL TOKENS</text>
 <text x="232" y="112" class="k">$5.02K</text>
 <text x="232" y="132" class="kl">API-EQUIVALENT COST</text>
-<text x="432" y="112" class="k">66,936</text>
+<text x="432" y="112" class="k">66,962</text>
 <text x="432" y="132" class="kl">MODEL RESPONSES</text>
 <text x="632" y="112" class="k">113</text>
 <text x="632" y="132" class="kl">ACTIVE DAYS</text>
@@ -33,7 +33,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <rect x="250" y="160" width="420" height="14" rx="7" fill="#161B22"/>
 <rect class="bar" style="animation-delay:0.15s" x="250" y="160" width="420.0" height="14" rx="7" fill="#D97757"/>
 <g class="fade" style="animation-delay:0.15s">
-<text x="688" y="174" class="val">6.56B</text>
+<text x="688" y="174" class="val">6.57B</text>
 <text x="688" y="192" class="v">64.0% · $3.57K</text>
 </g>
 <g class="fade" style="animation-delay:0.27s">
@@ -42,7 +42,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="54" y="242" class="v">via Codex CLI, Oh My Pi, OpenCode</text>
 </g>
 <rect x="250" y="210" width="420" height="14" rx="7" fill="#161B22"/>
-<rect class="bar" style="animation-delay:0.27s" x="250" y="210" width="132.8" height="14" rx="7" fill="#10A37F"/>
+<rect class="bar" style="animation-delay:0.27s" x="250" y="210" width="132.7" height="14" rx="7" fill="#10A37F"/>
 <g class="fade" style="animation-delay:0.27s">
 <text x="688" y="224" class="val">2.08B</text>
 <text x="688" y="242" class="v">20.2% · $1.19K</text>

@@ -122,7 +122,9 @@ def merged_omp_home(root: Path) -> Path:
             continue
         for p in base.iterdir():
             if (p / "agent" / "sessions").is_dir():
-                sources[p.name] = p / "agent" / "sessions"
+                # Folder-qualified: the same name in profiles/ and profiles-arsiv/
+                # (or a profile called "default") must not overwrite another source.
+                sources[f"{folder}-{p.name}"] = p / "agent" / "sessions"
     for name, src in sources.items():
         if src.is_dir():
             shutil.copytree(src, dst / name)

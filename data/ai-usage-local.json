@@ -822,9 +822,17 @@
    "date": "2026-10-08",
    "client": "omp",
    "model": "claude-sonnet-5-5",
-   "tokens": 5993166,
-   "cost": 1.533259,
-   "messages": 36
+   "tokens": 9023113,
+   "cost": 1.939301,
+   "messages": 49
+  },
+  {
+   "date": "2026-10-08",
+   "client": "omp",
+   "model": "gpt-6-sol",
+   "tokens": 141383,
+   "cost": 0.088272,
+   "messages": 13
   },
   {
    "date": "2026-10-08",
