@@ -115,19 +115,20 @@ def merged_omp_home(root: Path) -> Path:
     """
     omp = Path.home() / ".omp"
     dst = root / ".omp" / "agent" / "sessions"
-    sources = {"default": omp / "agent" / "sessions"}
+    # Destination = <folder>/<profile>: separate path components, so no two sources
+    # can share a directory ("profiles/x" vs "profiles-arsiv/x", or a profile named
+    # "default"), and a profile name is never lengthened.
+    sources = [(Path("default"), omp / "agent" / "sessions")]
     for folder in ("profiles", "profiles-arsiv"):
         base = omp / folder
         if not base.is_dir():
             continue
         for p in base.iterdir():
             if (p / "agent" / "sessions").is_dir():
-                # Folder-qualified: the same name in profiles/ and profiles-arsiv/
-                # (or a profile called "default") must not overwrite another source.
-                sources[f"{folder}-{p.name}"] = p / "agent" / "sessions"
-    for name, src in sources.items():
+                sources.append((Path(folder) / p.name, p / "agent" / "sessions"))
+    for rel, src in sources:
         if src.is_dir():
-            shutil.copytree(src, dst / name)
+            shutil.copytree(src, dst / rel)
     return root
 
 
