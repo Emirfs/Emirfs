@@ -112,13 +112,6 @@ Autonomous AI and frontier-tech journal. Hourly dispatches, trending open-source
 </tr>
 </table>
 
-## Tools I use
-
-- **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** — persistent agent sessions, skills, tools and gateway workflows; brought into Tern through my **hermes-tern** plugin.
-- **[Oh My Pi](https://github.com/can1357/oh-my-pi)** — multi-provider coding, subagents and engineering tools, with my own account, profile and artifact extensions.
-- **[Tern](https://stencil.so/tern)** — my terminal workspace for native agent UIs, split panes and plugins.
-- **[Claude Code](https://code.claude.com/docs/en/overview)**, **[Codex CLI](https://github.com/openai/codex)** and **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — coding and review across providers; **[Antigravity](https://antigravity.google/)** and **[Ollama](https://ollama.com/)** for additional cloud and local-model workflows.
-
 ## AI usage
 
 Recorded usage by model vendor, including **Hermes Agent** and **Oh My Pi**. Local snapshot refreshed **17 November 2026**.
@@ -137,10 +130,20 @@ Recorded usage by model vendor, including **Hermes Agent** and **Oh My Pi**. Loc
 
 </details>
 
-## Tech stack
+## AI harnesses
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i=c,cpp,py,go,ts,kotlin,dart,flutter,electron,flask,nextjs,sqlite,firebase,git,githubactions,arduino,linux,vscode&perline=9" alt="Tech stack" />
+
+[![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-0D1117?style=for-the-badge&logoColor=E6EDF3)](https://github.com/NousResearch/hermes-agent)
+[![Oh My Pi](https://img.shields.io/badge/Oh_My_Pi-0D1117?style=for-the-badge&logoColor=E6EDF3)](https://github.com/can1357/oh-my-pi)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-0D1117?style=for-the-badge&logo=claude&logoColor=D97757)](https://code.claude.com/docs/en/overview)
+[![Codex CLI](https://img.shields.io/badge/Codex_CLI-0D1117?style=for-the-badge&logo=openai&logoColor=10A37F)](https://github.com/openai/codex)
+[![Gemini CLI](https://img.shields.io/badge/Gemini_CLI-0D1117?style=for-the-badge&logo=googlegemini&logoColor=4E8CF7)](https://github.com/google-gemini/gemini-cli)
+[![OpenCode](https://img.shields.io/badge/OpenCode-0D1117?style=for-the-badge)](https://github.com/anomalyco/opencode)
+[![Antigravity](https://img.shields.io/badge/Antigravity-0D1117?style=for-the-badge)](https://antigravity.google/)
+
+**Workspace:** [Tern](https://stencil.so/tern) · **Local models:** [Ollama](https://ollama.com/)
+
 </div>
 
 ## GitHub activity
