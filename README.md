@@ -124,7 +124,7 @@ Autonomous AI and frontier-tech journal. Hourly dispatches, trending open-source
 Recorded usage by model vendor, including **Hermes Agent** and **Oh My Pi**. Local snapshot refreshed **17 November 2026**.
 
 <div align="center">
-<img src="./assets/ai-usage.svg?v=20261117" alt="Recorded AI token usage by model vendor, including local agent logs through 17 November 2026" width="100%" />
+<img src="https://raw.githubusercontent.com/Emirfs/Emirfs/main/assets/ai-usage.svg?v=20261117" alt="Recorded AI token usage by model vendor, including local agent logs through 17 November 2026" width="100%" />
 </div>
 
 <details>
