@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python -m unittest discover -s .github/scripts -p 'test_ai_usage_card.py'
       - run: python .github/scripts/ai_usage_card.py
       - name: Commit if changed
         run: |

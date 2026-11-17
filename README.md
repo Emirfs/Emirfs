@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:0E4C63,100:22C3D8&height=200&section=header&text=Emir%20Furkan%20Sar%C4%B1&fontSize=46&fontColor=E6EDF3&animation=fadeIn&fontAlignY=36&desc=Embedded%20Systems%20%C2%B7%20AI%20Agent%20Tooling&descAlignY=58&descSize=18" alt="Emir Furkan Sarı" width="100%" />
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=22C3D8&center=true&vCenter=true&width=640&lines=I+build+systems+where+AI+agents+do+real+work;Multi-agent+orchestration+%C2%B7+LLM+memory+%C2%B7+agent+daemons;STM32+firmware+%C2%B7+secure+RF+OTA+%C2%B7+bootloaders;10%2B+billion+tokens+across+Claude%2C+Codex+and+Gemini" alt="Typing intro" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=22C3D8&center=true&vCenter=true&width=640&lines=I+build+systems+where+AI+agents+do+real+work;Hermes+Agent+%C2%B7+Oh+My+Pi+%C2%B7+Tern;Multi-agent+orchestration+%C2%B7+LLM+memory+%C2%B7+agent+daemons;STM32+firmware+%C2%B7+secure+RF+OTA+%C2%B7+bootloaders" alt="AI agent tooling and embedded firmware" /></a>
 
 [![Website](https://img.shields.io/badge/emirfurkansari.com-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22C3D8)](https://www.emirfurkansari.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/emirfurkansar%C4%B1/)
@@ -14,9 +14,9 @@
 ## About me
 
 I design **AI agent systems** and build them on top of real engineering work in **embedded firmware**.
-Most of my work lives in private repositories: an agent daemon that ships code across my GitHub fleet,
-a multi-provider canvas for Claude Code, Codex and Gemini, a persistent memory layer for LLMs,
-and agent workflows that build, flash and debug STM32 firmware on real hardware.
+My current tooling centers on **Hermes Agent**, **Oh My Pi** and **Tern**: native agent interfaces,
+terminal plugins, multi-provider workflows and persistent LLM memory.
+I also build an autonomous GitHub agent daemon and workflows that build, flash and debug STM32 firmware on real hardware.
 
 This page is the portfolio view of that work. Public repositories are linked; private ones are marked.
 
@@ -28,6 +28,24 @@ This page is the portfolio view of that work. Public repositories are linked; pr
 ## AI & agent systems
 
 <table>
+<tr>
+<td width="50%" valign="top">
+
+### [hermes-tern](https://github.com/Emirfs/hermes-tern)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Public](https://img.shields.io/badge/public-238636?style=flat-square)
+
+Hermes Agent in Tern's native UI. `hermes tern` renders conversations, tool calls, approvals and subagents as real UI components, with resumable sessions, live background-job charts and linked pull requests.
+
+</td>
+<td width="50%" valign="top">
+
+### [tern-plugins](https://github.com/Emirfs/tern-plugins)
+![Luau](https://img.shields.io/badge/Luau-00A2FF?style=flat-square&logo=lua&logoColor=white) ![Public](https://img.shields.io/badge/public-238636?style=flat-square)
+
+Tern plugins and Oh My Pi extensions: cross-profile account limits, pane profile labels, independent split columns, switchable UI mods, active-account status and versioned artifacts beside the chat.
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -94,13 +112,30 @@ Autonomous AI and frontier-tech journal. Hourly dispatches, trending open-source
 </tr>
 </table>
 
+## Tools I use
+
+- **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** — persistent agent sessions, skills, tools and gateway workflows; brought into Tern through my **hermes-tern** plugin.
+- **[Oh My Pi](https://github.com/can1357/oh-my-pi)** — multi-provider coding, subagents and engineering tools, with my own account, profile and artifact extensions.
+- **[Tern](https://stencil.so/tern)** — my terminal workspace for native agent UIs, split panes and plugins.
+- **[Claude Code](https://code.claude.com/docs/en/overview)**, **[Codex CLI](https://github.com/openai/codex)** and **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — coding and review across providers; **[Antigravity](https://antigravity.google/)** and **[Ollama](https://ollama.com/)** for additional cloud and local-model workflows.
+
 ## AI usage
 
-Every project above was built together with AI coding agents. This is how much I have used each of them, by model vendor.
+Recorded usage by model vendor, including **Hermes Agent** and **Oh My Pi**. Local snapshot refreshed **17 November 2026**.
 
 <div align="center">
-<img src="./assets/ai-usage.svg?v=20261008" alt="AI token usage by model vendor" width="100%" />
+<img src="./assets/ai-usage.svg?v=20261117" alt="Recorded AI token usage by model vendor, including local agent logs through 17 November 2026" width="100%" />
 </div>
+
+<details>
+<summary>Sources &amp; counting</summary>
+
+- Public [Tokscale submissions](https://tokscale.ai/u/Emirfs) plus local agent logs across Oh My Pi profiles.
+- Historical snapshots retain usage from retired logs. Fresh records replace the same day/client/model; public submissions take precedence over local snapshots.
+- Tokens include cache reads. Cost is the estimated list-price equivalent, not actual spend; some records are unpriced or lack usage events.
+- The daily workflow re-renders public data. Refresh private local logs on my machine with `python .github/scripts/ai_usage_card.py --collect`.
+
+</details>
 
 ## Tech stack
 

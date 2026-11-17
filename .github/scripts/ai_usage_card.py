@@ -6,6 +6,8 @@ Two data sources are merged per day:
 * A local snapshot, data/ai-usage-local.json, for later days. Tokscale's
   scanner only reads ~/.omp/agent/sessions, so `--collect` copies every
   Oh My Pi profile's sessions into one temporary home and scans that.
+  Historical snapshot rows are retained when the source logs have been retired;
+  a fresh row replaces (never adds to) the same day/client/model.
 
 Usage:
   python .github/scripts/ai_usage_card.py --collect   # local machine: refresh snapshot + card
@@ -48,6 +50,8 @@ HARNESSES = {
     "opencode": "OpenCode",
     "pi": "Pi",
     "omp": "Oh My Pi",
+    "hermes": "Hermes Agent",
+    "antigravity-extension": "Antigravity",
 }
 
 
@@ -137,7 +141,11 @@ def collect(server_end: str) -> None:
     rows = [r for r in tokscale_graph(since, None, None) if r["client"] != "omp"]
     with tempfile.TemporaryDirectory() as tmp:
         rows += tokscale_graph(since, merged_omp_home(Path(tmp)), "omp")
-    rows = [r for r in rows if r["tokens"] > 0]
+    previous, _ = load_snapshot(server_end)
+    merged = {(r["date"], r["client"], r["model"]): r for r in previous}
+    for r in rows:
+        merged[(r["date"], r["client"], r["model"])] = r
+    rows = [r for r in merged.values() if r["tokens"] > 0]
     rows.sort(key=lambda r: (r["date"], r["client"], r["model"]))
     SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
     SNAPSHOT.write_text(
@@ -197,7 +205,7 @@ def render(rows: list[dict], server_end: str, collected: str | None) -> str:
 
     source = f"Tokscale submissions to {server_end}"
     if collected:
-        source += f" + local Oh My Pi and CLI logs to {last}"
+        source += f" + local agent logs to {last}"
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '

@@ -1,13 +1,13 @@
 {
  "since": "2026-08-29",
- "collected": "2026-10-08",
+ "collected": "2026-11-17",
  "rows": [
   {
    "date": "2026-09-02",
    "client": "antigravity-cli",
    "model": "gemini-3.7-flash",
-   "tokens": 1651078,
-   "cost": 0.584831,
+   "tokens": 1627970,
+   "cost": 0.544918,
    "messages": 41
   },
   {
@@ -22,8 +22,8 @@
    "date": "2026-09-08",
    "client": "antigravity-cli",
    "model": "gemini-3.8-flash",
-   "tokens": 734893,
-   "cost": 0.191633,
+   "tokens": 699585,
+   "cost": 0.166921,
    "messages": 25
   },
   {
@@ -94,16 +94,16 @@
    "date": "2026-09-11",
    "client": "antigravity-extension",
    "model": "gemini-3.6-flash",
-   "tokens": 20936,
-   "cost": 0.010641,
+   "tokens": 19749,
+   "cost": 0.009837,
    "messages": 1
   },
   {
    "date": "2026-09-11",
    "client": "antigravity-extension",
    "model": "gemini-3.8-flash",
-   "tokens": 20234,
-   "cost": 0.009832,
+   "tokens": 18917,
+   "cost": 0.008842,
    "messages": 1
   },
   {
@@ -231,7 +231,7 @@
    "client": "codex",
    "model": "openrouter/deepseek-v4.1-flash",
    "tokens": 110857764,
-   "cost": 1.749613,
+   "cost": 0.922906,
    "messages": 300
   },
   {
@@ -294,16 +294,16 @@
    "date": "2026-09-22",
    "client": "codex",
    "model": "gpt-6-astra",
-   "tokens": 23407132,
-   "cost": 34.723276,
-   "messages": 279
+   "tokens": 23632921,
+   "cost": 37.060446,
+   "messages": 280
   },
   {
    "date": "2026-09-22",
    "client": "codex",
    "model": "openrouter/deepseek-v4.1-flash",
    "tokens": 237999144,
-   "cost": 3.510733,
+   "cost": 1.91325,
    "messages": 466
   },
   {
@@ -804,6 +804,14 @@
   },
   {
    "date": "2026-10-08",
+   "client": "codex",
+   "model": "gpt-6-sol",
+   "tokens": 1683110,
+   "cost": 0.572042,
+   "messages": 34
+  },
+  {
+   "date": "2026-10-08",
    "client": "omp",
    "model": "claude-haiku-5-5",
    "tokens": 559263,
@@ -841,6 +849,958 @@
    "tokens": 11145,
    "cost": 0.022394,
    "messages": 1
+  },
+  {
+   "date": "2026-10-09",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 44311928,
+   "cost": 20.798159,
+   "messages": 345
+  },
+  {
+   "date": "2026-10-09",
+   "client": "omp",
+   "model": "gpt-5.5",
+   "tokens": 7176,
+   "cost": 0.03623,
+   "messages": 1
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 13491,
+   "cost": 0.001716,
+   "messages": 1
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 107938523,
+   "cost": 42.852047,
+   "messages": 434
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 198258521,
+   "cost": 43.263352,
+   "messages": 1399
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "gemini-3.7-flash",
+   "tokens": 252014,
+   "cost": 0.197696,
+   "messages": 1
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 41756722,
+   "cost": 7.11842,
+   "messages": 161
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "gpt-6-sol",
+   "tokens": 33964270,
+   "cost": 11.917927,
+   "messages": 275
+  },
+  {
+   "date": "2026-10-12",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 19876115,
+   "cost": 5.595235,
+   "messages": 102
+  },
+  {
+   "date": "2026-10-13",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 318964365,
+   "cost": 99.798874,
+   "messages": 1258
+  },
+  {
+   "date": "2026-10-13",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 2355118,
+   "cost": 0.950875,
+   "messages": 30
+  },
+  {
+   "date": "2026-10-13",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 3012683,
+   "cost": 3.301147,
+   "messages": 13
+  },
+  {
+   "date": "2026-10-14",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 337832384,
+   "cost": 107.314485,
+   "messages": 1443
+  },
+  {
+   "date": "2026-10-14",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 22870331,
+   "cost": 3.977165,
+   "messages": 294
+  },
+  {
+   "date": "2026-10-15",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 166824609,
+   "cost": 78.507878,
+   "messages": 937
+  },
+  {
+   "date": "2026-10-15",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 8330616,
+   "cost": 1.361426,
+   "messages": 169
+  },
+  {
+   "date": "2026-10-15",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 42560494,
+   "cost": 10.770998,
+   "messages": 290
+  },
+  {
+   "date": "2026-10-16",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1657532,
+   "cost": 0.08337,
+   "messages": 33
+  },
+  {
+   "date": "2026-10-16",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 367961991,
+   "cost": 129.953969,
+   "messages": 1603
+  },
+  {
+   "date": "2026-10-16",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 17364734,
+   "cost": 2.938079,
+   "messages": 209
+  },
+  {
+   "date": "2026-10-16",
+   "client": "omp",
+   "model": "gpt-5.6-sol",
+   "tokens": 2134071,
+   "cost": 1.566424,
+   "messages": 29
+  },
+  {
+   "date": "2026-10-16",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 20619845,
+   "cost": 5.772571,
+   "messages": 80
+  },
+  {
+   "date": "2026-10-19",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 6293343,
+   "cost": 0.307923,
+   "messages": 118
+  },
+  {
+   "date": "2026-10-19",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 491547174,
+   "cost": 144.921381,
+   "messages": 1685
+  },
+  {
+   "date": "2026-10-19",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 2968984,
+   "cost": 0.988474,
+   "messages": 41
+  },
+  {
+   "date": "2026-10-19",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 10172,
+   "cost": 0.008379,
+   "messages": 1
+  },
+  {
+   "date": "2026-10-19",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 38302221,
+   "cost": 8.443749,
+   "messages": 182
+  },
+  {
+   "date": "2026-10-20",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 214493379,
+   "cost": 67.833701,
+   "messages": 834
+  },
+  {
+   "date": "2026-10-20",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 138302754,
+   "cost": 35.952825,
+   "messages": 804
+  },
+  {
+   "date": "2026-10-20",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 18453,
+   "cost": 0.030349,
+   "messages": 2
+  },
+  {
+   "date": "2026-10-20",
+   "client": "omp",
+   "model": "gpt-6-sol",
+   "tokens": 3646276,
+   "cost": 1.299549,
+   "messages": 45
+  },
+  {
+   "date": "2026-10-20",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 23053582,
+   "cost": 3.978821,
+   "messages": 102
+  },
+  {
+   "date": "2026-10-21",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 380048771,
+   "cost": 120.881593,
+   "messages": 1664
+  },
+  {
+   "date": "2026-10-21",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 31334658,
+   "cost": 6.434724,
+   "messages": 185
+  },
+  {
+   "date": "2026-10-21",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 11349627,
+   "cost": 1.608327,
+   "messages": 98
+  },
+  {
+   "date": "2026-10-21",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 19628920,
+   "cost": 4.09201,
+   "messages": 77
+  },
+  {
+   "date": "2026-10-22",
+   "client": "codex",
+   "model": "gpt-6.1-sol",
+   "tokens": 288627,
+   "cost": 0.137803,
+   "messages": 7
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1989490,
+   "cost": 0.070428,
+   "messages": 38
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 287161511,
+   "cost": 95.044543,
+   "messages": 1316
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 60888808,
+   "cost": 12.998518,
+   "messages": 476
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 28298185,
+   "cost": 3.880227,
+   "messages": 215
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "gpt-6-sol",
+   "tokens": 35111367,
+   "cost": 10.087009,
+   "messages": 260
+  },
+  {
+   "date": "2026-10-22",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 52974255,
+   "cost": 13.678768,
+   "messages": 255
+  },
+  {
+   "date": "2026-10-23",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 17145,
+   "cost": 0.011391,
+   "messages": 2
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 963421,
+   "cost": 0.050797,
+   "messages": 18
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 312367164,
+   "cost": 123.945341,
+   "messages": 1479
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 88672482,
+   "cost": 13.987068,
+   "messages": 389
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 4850865,
+   "cost": 0.794106,
+   "messages": 93
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "gpt-5.6-sol",
+   "tokens": 3685912,
+   "cost": 3.668141,
+   "messages": 59
+  },
+  {
+   "date": "2026-10-23",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 11728583,
+   "cost": 2.744524,
+   "messages": 117
+  },
+  {
+   "date": "2026-10-26",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 5792793,
+   "cost": 0.135463,
+   "messages": 457
+  },
+  {
+   "date": "2026-10-26",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 61491783,
+   "cost": 37.513949,
+   "messages": 717
+  },
+  {
+   "date": "2026-10-26",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 29911270,
+   "cost": 10.88691,
+   "messages": 118
+  },
+  {
+   "date": "2026-10-26",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 3956829,
+   "cost": 1.803996,
+   "messages": 57
+  },
+  {
+   "date": "2026-10-26",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 8999,
+   "cost": 0.010084,
+   "messages": 1
+  },
+  {
+   "date": "2026-10-27",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 295360,
+   "cost": 0.009994,
+   "messages": 16
+  },
+  {
+   "date": "2026-10-27",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 74729628,
+   "cost": 26.226582,
+   "messages": 821
+  },
+  {
+   "date": "2026-10-27",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 368307945,
+   "cost": 113.780089,
+   "messages": 1355
+  },
+  {
+   "date": "2026-10-30",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 15228128,
+   "cost": 9.083259,
+   "messages": 86
+  },
+  {
+   "date": "2026-10-30",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 38300203,
+   "cost": 15.768008,
+   "messages": 739
+  },
+  {
+   "date": "2026-10-30",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1512349,
+   "cost": 0.06943,
+   "messages": 29
+  },
+  {
+   "date": "2026-10-30",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 187236270,
+   "cost": 76.033226,
+   "messages": 992
+  },
+  {
+   "date": "2026-10-30",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 9313686,
+   "cost": 1.322648,
+   "messages": 83
+  },
+  {
+   "date": "2026-10-30",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 52440404,
+   "cost": 9.474057,
+   "messages": 347
+  },
+  {
+   "date": "2026-11-02",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 747863,
+   "cost": 0.030191,
+   "messages": 24
+  },
+  {
+   "date": "2026-11-02",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 25658882,
+   "cost": 11.945718,
+   "messages": 79
+  },
+  {
+   "date": "2026-11-02",
+   "client": "hermes",
+   "model": "claude-sonnet-5-5",
+   "tokens": 5344303,
+   "cost": 4.292992,
+   "messages": 334
+  },
+  {
+   "date": "2026-11-02",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 98090646,
+   "cost": 28.357029,
+   "messages": 150
+  },
+  {
+   "date": "2026-11-02",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 313359706,
+   "cost": 113.803607,
+   "messages": 1580
+  },
+  {
+   "date": "2026-11-02",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 16293545,
+   "cost": 1.727038,
+   "messages": 57
+  },
+  {
+   "date": "2026-11-02",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 4990425,
+   "cost": 2.116616,
+   "messages": 37
+  },
+  {
+   "date": "2026-11-03",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 333967,
+   "cost": 0.019776,
+   "messages": 53
+  },
+  {
+   "date": "2026-11-03",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 26361045,
+   "cost": 14.571082,
+   "messages": 538
+  },
+  {
+   "date": "2026-11-03",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 49329940,
+   "cost": 15.820123,
+   "messages": 485
+  },
+  {
+   "date": "2026-11-03",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 235440727,
+   "cost": 91.083195,
+   "messages": 1474
+  },
+  {
+   "date": "2026-11-03",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 9580681,
+   "cost": 1.594445,
+   "messages": 211
+  },
+  {
+   "date": "2026-11-03",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 7403747,
+   "cost": 1.51167,
+   "messages": 45
+  },
+  {
+   "date": "2026-11-04",
+   "client": "antigravity-cli",
+   "model": "gemini-4-argon-trial",
+   "tokens": 468767,
+   "cost": 0.99412,
+   "messages": 20
+  },
+  {
+   "date": "2026-11-04",
+   "client": "claude",
+   "model": "claude-haiku-5-5",
+   "tokens": 36768,
+   "cost": 0.004233,
+   "messages": 1
+  },
+  {
+   "date": "2026-11-04",
+   "client": "codex",
+   "model": "gpt-6.1-sol",
+   "tokens": 17643,
+   "cost": 0.035462,
+   "messages": 1
+  },
+  {
+   "date": "2026-11-04",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 20875858,
+   "cost": 0.517112,
+   "messages": 242
+  },
+  {
+   "date": "2026-11-04",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 8845576,
+   "cost": 6.41535,
+   "messages": 66
+  },
+  {
+   "date": "2026-11-04",
+   "client": "hermes",
+   "model": "claude-sonnet-5-5",
+   "tokens": 750284,
+   "cost": 0.602691,
+   "messages": 0
+  },
+  {
+   "date": "2026-11-04",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 22800597,
+   "cost": 7.601676,
+   "messages": 593
+  },
+  {
+   "date": "2026-11-04",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1468237,
+   "cost": 0.088411,
+   "messages": 32
+  },
+  {
+   "date": "2026-11-04",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 59531626,
+   "cost": 24.405932,
+   "messages": 396
+  },
+  {
+   "date": "2026-11-04",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 12612,
+   "cost": 0.017835,
+   "messages": 1
+  },
+  {
+   "date": "2026-11-04",
+   "client": "omp",
+   "model": "gemini-4-argon",
+   "tokens": 21045300,
+   "cost": 6.792223,
+   "messages": 108
+  },
+  {
+   "date": "2026-11-05",
+   "client": "antigravity-cli",
+   "model": "gemini-3.8-flash-n",
+   "tokens": 35443143,
+   "cost": 6.996393,
+   "messages": 470
+  },
+  {
+   "date": "2026-11-05",
+   "client": "antigravity-cli",
+   "model": "gemini-4-argon-a",
+   "tokens": 249339,
+   "cost": 0.250655,
+   "messages": 17
+  },
+  {
+   "date": "2026-11-05",
+   "client": "antigravity-cli",
+   "model": "gemini-4-argon-trial",
+   "tokens": 2983994,
+   "cost": 6.04643,
+   "messages": 42
+  },
+  {
+   "date": "2026-11-05",
+   "client": "codex",
+   "model": "gpt-6.1-sol",
+   "tokens": 38480011,
+   "cost": 9.764821,
+   "messages": 292
+  },
+  {
+   "date": "2026-11-05",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 4045731,
+   "cost": 0.216663,
+   "messages": 288
+  },
+  {
+   "date": "2026-11-05",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 68116756,
+   "cost": 37.84846,
+   "messages": 310
+  },
+  {
+   "date": "2026-11-05",
+   "client": "hermes",
+   "model": "claude-sonnet-5-5",
+   "tokens": 2533916,
+   "cost": 2.035454,
+   "messages": 0
+  },
+  {
+   "date": "2026-11-05",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 9873134,
+   "cost": 3.046847,
+   "messages": 0
+  },
+  {
+   "date": "2026-11-05",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 5244750,
+   "cost": 0.323261,
+   "messages": 107
+  },
+  {
+   "date": "2026-11-05",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 88975747,
+   "cost": 53.151308,
+   "messages": 702
+  },
+  {
+   "date": "2026-11-05",
+   "client": "omp",
+   "model": "gemini-3.8-flash",
+   "tokens": 70918,
+   "cost": 0.069419,
+   "messages": 7
+  },
+  {
+   "date": "2026-11-05",
+   "client": "omp",
+   "model": "gemini-4-argon",
+   "tokens": 216424,
+   "cost": 0.16663,
+   "messages": 7
+  },
+  {
+   "date": "2026-11-05",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 33471152,
+   "cost": 12.01497,
+   "messages": 311
+  },
+  {
+   "date": "2026-11-06",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 6951204,
+   "cost": 0.320254,
+   "messages": 384
+  },
+  {
+   "date": "2026-11-06",
+   "client": "hermes",
+   "model": "claude-opus-5-5",
+   "tokens": 85647600,
+   "cost": 44.324576,
+   "messages": 299
+  },
+  {
+   "date": "2026-11-06",
+   "client": "hermes",
+   "model": "claude-sonnet-5-5",
+   "tokens": 56925899,
+   "cost": 15.920569,
+   "messages": 512
+  },
+  {
+   "date": "2026-11-06",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 14626637,
+   "cost": 8.648925,
+   "messages": 606
+  },
+  {
+   "date": "2026-11-06",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1989628,
+   "cost": 0.112019,
+   "messages": 46
+  },
+  {
+   "date": "2026-11-06",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 35283330,
+   "cost": 14.085851,
+   "messages": 292
+  },
+  {
+   "date": "2026-11-09",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 1419626,
+   "cost": 0.028681,
+   "messages": 0
+  },
+  {
+   "date": "2026-11-10",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 318544,
+   "cost": 0.006436,
+   "messages": 0
+  },
+  {
+   "date": "2026-11-16",
+   "client": "claude",
+   "model": "claude-opus-5-5",
+   "tokens": 8713,
+   "cost": 0.046205,
+   "messages": 2
+  },
+  {
+   "date": "2026-11-16",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 35200144,
+   "cost": 11.955916,
+   "messages": 398
+  },
+  {
+   "date": "2026-11-16",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 393855063,
+   "cost": 130.542739,
+   "messages": 1424
+  },
+  {
+   "date": "2026-11-16",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 25101487,
+   "cost": 11.273297,
+   "messages": 327
+  },
+  {
+   "date": "2026-11-16",
+   "client": "omp",
+   "model": "gpt-6-sol",
+   "tokens": 15098795,
+   "cost": 5.020694,
+   "messages": 197
+  },
+  {
+   "date": "2026-11-16",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 2247342,
+   "cost": 1.02717,
+   "messages": 32
+  },
+  {
+   "date": "2026-11-17",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 114085,
+   "cost": 0.007068,
+   "messages": 10
+  },
+  {
+   "date": "2026-11-17",
+   "client": "omp",
+   "model": "claude-haiku-5-5",
+   "tokens": 1452709,
+   "cost": 0.077545,
+   "messages": 29
+  },
+  {
+   "date": "2026-11-17",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 254222442,
+   "cost": 84.212138,
+   "messages": 1264
+  },
+  {
+   "date": "2026-11-17",
+   "client": "omp",
+   "model": "gpt-6.1-sol",
+   "tokens": 27678940,
+   "cost": 5.497862,
+   "messages": 185
   }
  ]
 }
