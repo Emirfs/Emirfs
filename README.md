@@ -114,19 +114,19 @@ Autonomous AI and frontier-tech journal. Hourly dispatches, trending open-source
 
 ## AI usage
 
-Recorded usage by model vendor, including **Hermes Agent** and **Oh My Pi**. Local snapshot refreshed **17 November 2026**.
+Recorded usage by model vendor, including **Hermes Agent** and every **Oh My Pi** profile. Refreshed every 3 hours.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Emirfs/Emirfs/main/assets/ai-usage.svg?v=20261117" alt="Recorded AI token usage by model vendor, including local agent logs through 17 November 2026" width="100%" />
+<img src="https://raw.githubusercontent.com/Emirfs/Emirfs/main/assets/ai-usage.svg?v=20261118" alt="Recorded AI token usage by model vendor, from Tokscale submissions of all local agent logs" width="100%" />
 </div>
 
 <details>
 <summary>Sources &amp; counting</summary>
 
-- Public [Tokscale submissions](https://tokscale.ai/u/Emirfs) plus local agent logs across Oh My Pi profiles.
-- Historical snapshots retain usage from retired logs. Fresh records replace the same day/client/model; public submissions take precedence over local snapshots.
+- [Tokscale submissions](https://tokscale.ai/u/Emirfs) from my machine every 3 hours, scanning every Oh My Pi profile and the session backup of retired ones.
+- Submitted day totals never decrease, so usage stays counted after its local logs are deleted.
 - Tokens include cache reads. Cost is the estimated list-price equivalent, not actual spend; some records are unpriced or lack usage events.
-- The daily workflow re-renders public data. Refresh private local logs on my machine with `python .github/scripts/ai_usage_card.py --collect`.
+- The workflow re-renders the card from the Tokscale API every 3 hours.
 
 </details>
 

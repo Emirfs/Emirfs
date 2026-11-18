@@ -1,35 +1,22 @@
 """Render assets/ai-usage.svg: AI token usage grouped by model vendor.
 
-Two data sources are merged per day:
+The only source is the public Tokscale API. The local machine keeps it complete and current:
 
-* Tokscale submissions (public API) for every day up to the last submission.
-* A local snapshot, data/ai-usage-local.json, for later days. Tokscale's
-  scanner only reads ~/.omp/agent/sessions, so `--collect` copies every
-  Oh My Pi profile's sessions into one temporary home and scans that.
-  Historical snapshot rows are retained when the source logs have been retired;
-  a fresh row replaces (never adds to) the same day/client/model.
+* `%APPDATA%/tokscale/settings.json` → `scanner.extraScanPaths.omp` lists every Oh My Pi profile's
+  sessions (`~/.omp/profiles/*/agent/sessions`) and the session backup of retired profiles;
+  Tokscale on its own reads only `~/.omp/agent/sessions`.
+* `tokscale autosubmit` submits every 3 hours. Submitted day totals never decrease, so usage from
+  logs deleted later stays counted.
 
 Usage:
-  python .github/scripts/ai_usage_card.py --collect             # local: refresh snapshot + card
-  python .github/scripts/ai_usage_card.py --collect --publish   # scheduled: also push snapshot to `usage-data`
-  python .github/scripts/ai_usage_card.py                       # CI: re-render from API + snapshot
-
-Every Hermes profile (its own state.db) is counted too, not only the main Hermes home.
+  python .github/scripts/ai_usage_card.py   # CI: re-render from the API
 """
 
 from __future__ import annotations
 
-import argparse
-import base64
-import hashlib
 import json
-import os
-import shutil
-import subprocess
-import tempfile
 import urllib.request
 from collections import defaultdict
-from datetime import date, timedelta
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -37,8 +24,6 @@ USER = "Emirfs"
 API = f"https://tokscale.ai/api/users/{USER}"
 REPO = Path(__file__).resolve().parents[2]
 CARD = REPO / "assets" / "ai-usage.svg"
-SNAPSHOT = REPO / "data" / "ai-usage-local.json"
-DATA_BRANCH = "usage-data"
 
 # vendor -> (title, subtitle, colour); order is the fallback sort order
 VENDORS = {
@@ -88,12 +73,7 @@ def row(day: str, client: str, model: str, tokens: dict, cost: float, messages: 
     }
 
 
-# ---------------------------------------------------------------- sources
-
-def fetch_server() -> tuple[list[dict], str]:
-    req = urllib.request.Request(API, headers={"User-Agent": f"{USER}-profile-readme"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.load(resp)
+def parse(data: dict) -> tuple[list[dict], str]:
     rows = []
     for day in data["contributions"]:
         for entry in day["clients"]:
@@ -102,99 +82,10 @@ def fetch_server() -> tuple[list[dict], str]:
     return rows, data["dateRange"]["end"]
 
 
-def tokscale_graph(since: str, home: Path | None, client: str | None, env: dict | None = None) -> list[dict]:
-    with tempfile.TemporaryDirectory() as tmp:
-        out = Path(tmp) / "graph.json"
-        cmd = ["bunx", "tokscale@latest", "graph", "--no-spinner", "--since", since, "--output", str(out)]
-        if home:
-            cmd += ["--home", str(home)]
-        if client:
-            cmd += ["-c", client]
-        subprocess.run(cmd, check=True, shell=(shutil.which("bunx") or "").lower().endswith((".cmd", ".bat")),
-                       env={**os.environ, **env} if env else None)
-        data = json.loads(out.read_text(encoding="utf-8"))
-    rows = []
-    for day in data["contributions"]:
-        for e in day["clients"]:
-            rows.append(row(day["date"], e["client"], e["modelId"], e["tokens"], e["cost"], e["messages"]))
-    return rows
-
-
-def hermes_profiles() -> list[Path]:
-    """Hermes profiles keep their own state.db; tokscale reads one Hermes home per run (HERMES_HOME)."""
-    homes = [Path(os.environ["LOCALAPPDATA"]) / "hermes"] if os.environ.get("LOCALAPPDATA") else []
-    for home in homes + [Path.home() / ".hermes"]:
-        if (home / "profiles").is_dir():
-            return sorted(p for p in (home / "profiles").iterdir() if (p / "state.db").is_file())
-    return []
-
-
-def combine(rows: list[dict]) -> list[dict]:
-    """One row per day/client/model: several sources (Hermes profiles, providers) can report the same key."""
-    out: dict[tuple, dict] = {}
-    for r in rows:
-        key = (r["date"], r["client"], r["model"])
-        if key in out:
-            o = out[key]
-            o["tokens"] += r["tokens"]
-            o["cost"] = round(o["cost"] + r["cost"], 6)
-            o["messages"] += r["messages"]
-        else:
-            out[key] = dict(r)
-    return list(out.values())
-
-
-def merged_omp_home(root: Path) -> Path:
-    """Copy every Oh My Pi profile's sessions under one fake home.
-
-    Retired profiles live in ~/.omp/profiles-arsiv; they still count.
-    """
-    omp = Path.home() / ".omp"
-    dst = root / ".omp" / "agent" / "sessions"
-    # Destination = <folder>/<profile>: separate path components, so no two sources
-    # can share a directory ("profiles/x" vs "profiles-arsiv/x", or a profile named
-    # "default"), and a profile name is never lengthened.
-    sources = [(Path("default"), omp / "agent" / "sessions")]
-    for folder in ("profiles", "profiles-arsiv"):
-        base = omp / folder
-        if not base.is_dir():
-            continue
-        for p in base.iterdir():
-            if (p / "agent" / "sessions").is_dir():
-                sources.append((Path(folder) / p.name, p / "agent" / "sessions"))
-    for rel, src in sources:
-        if src.is_dir():
-            shutil.copytree(src, dst / rel)
-    return root
-
-
-def collect(server_end: str) -> None:
-    since = (date.fromisoformat(server_end) + timedelta(days=1)).isoformat()
-    rows = [r for r in tokscale_graph(since, None, None) if r["client"] != "omp"]
-    with tempfile.TemporaryDirectory() as tmp:
-        rows += tokscale_graph(since, merged_omp_home(Path(tmp)), "omp")
-    for profile in hermes_profiles():
-        rows += tokscale_graph(since, None, "hermes", {"HERMES_HOME": str(profile)})
-    previous, _ = load_snapshot(server_end)
-    merged = {(r["date"], r["client"], r["model"]): r for r in previous}
-    for r in combine(rows):
-        merged[(r["date"], r["client"], r["model"])] = r
-    rows = [r for r in merged.values() if r["tokens"] > 0]
-    rows.sort(key=lambda r: (r["date"], r["client"], r["model"]))
-    SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
-    SNAPSHOT.write_text(
-        json.dumps({"since": since, "collected": date.today().isoformat(), "rows": rows}, indent=1) + "\n",
-        encoding="utf-8",
-    )
-    print(f"snapshot: {len(rows)} rows from {since}")
-
-
-def load_snapshot(server_end: str) -> tuple[list[dict], str | None]:
-    if not SNAPSHOT.exists():
-        return [], None
-    snap = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
-    rows = [r for r in snap["rows"] if r["date"] > server_end]  # server wins once it catches up
-    return rows, snap.get("collected")
+def fetch_server() -> tuple[list[dict], str]:
+    req = urllib.request.Request(API, headers={"User-Agent": f"{USER}-profile-readme"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return parse(json.load(resp))
 
 
 # ---------------------------------------------------------------- render
@@ -222,14 +113,13 @@ def summarise(rows: list[dict]) -> list[dict]:
     return out
 
 
-def render(rows: list[dict], server_end: str, collected: str | None) -> str:
+def render(rows: list[dict], server_end: str) -> str:
     groups = summarise(rows)
     total = sum(g["tokens"] for g in groups)
     cost = sum(g["cost"] for g in groups)
     groups = [g for g in groups if g["tokens"] >= total * 0.001]  # hide rows under 0.1%
     days = len({r["date"] for r in rows})
     messages = sum(r["messages"] for r in rows)
-    last = max(r["date"] for r in rows)
 
     width, pad = 860, 32
     head_h, row_h = 150, 50
@@ -238,8 +128,6 @@ def render(rows: list[dict], server_end: str, collected: str | None) -> str:
     peak = groups[0]["tokens"]
 
     source = f"Tokscale submissions to {server_end}"
-    if collected:
-        source += f" + local agent logs to {last}"
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
@@ -308,53 +196,11 @@ def render(rows: list[dict], server_end: str, collected: str | None) -> str:
     return "\n".join(out) + "\n"
 
 
-def gh(*args: str, check: bool = True, body: dict | None = None) -> subprocess.CompletedProcess:
-    done = subprocess.run(["gh", *args], capture_output=True, encoding="utf-8", errors="replace",
-                          input=json.dumps(body) if body is not None else None)
-    if check and done.returncode:
-        raise SystemExit(f"gh {' '.join(args[:3])} failed: {done.stderr.strip()[-300:]}")
-    return done
-
-
-def publish() -> None:
-    """Push the local snapshot to the `usage-data` branch and ask CI to re-render.
-
-    main changes only through the CI bot; this machine writes nothing but the data branch.
-    """
-    repo, path = f"repos/{USER}/{USER}", "data/ai-usage-local.json"
-    if gh("api", f"{repo}/git/ref/heads/{DATA_BRANCH}", check=False).returncode:
-        main_sha = gh("api", f"{repo}/git/ref/heads/main", "--jq", ".object.sha").stdout.strip()
-        gh("api", "-X", "POST", f"{repo}/git/refs", "-f", f"ref=refs/heads/{DATA_BRANCH}", "-f", f"sha={main_sha}")
-    data = SNAPSHOT.read_bytes()
-    current = gh("api", f"{repo}/contents/{path}?ref={DATA_BRANCH}", "--jq", ".sha", check=False).stdout.strip()
-    if current == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest():
-        print("publish: unchanged")
-        return
-    body = {"branch": DATA_BRANCH, "message": f"chore(usage): yerel kullanım kaydı {date.today().isoformat()}",
-            "content": base64.b64encode(data).decode("ascii")}
-    if current:
-        body["sha"] = current
-    # The content goes on stdin: the snapshot's base64 is past Windows' command-line limit.
-    gh("api", "-X", "PUT", f"{repo}/contents/{path}", "--input", "-", body=body)
-    gh("workflow", "run", "ai-usage.yml", "-R", f"{USER}/{USER}", "--ref", "main")
-    print(f"publish: {DATA_BRANCH} updated, card render requested")
-
-
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--collect", action="store_true", help="refresh the local snapshot first")
-    parser.add_argument("--publish", action="store_true", help="push the snapshot to the data branch (with --collect)")
-    args = parser.parse_args()
-
-    server_rows, server_end = fetch_server()
-    if args.collect:
-        collect(server_end)
-        if args.publish:
-            publish()
-    local_rows, collected = load_snapshot(server_end)
-    rows = [r for r in server_rows if r["tokens"] > 0] + local_rows
+    rows, server_end = fetch_server()
+    rows = [r for r in rows if r["tokens"] > 0]
     CARD.parent.mkdir(parents=True, exist_ok=True)
-    CARD.write_text(render(rows, server_end, collected), encoding="utf-8")
+    CARD.write_text(render(rows, server_end), encoding="utf-8")
     for g in summarise(rows):
         print(f'{g["vendor"]:<10}{human(g["tokens"]):>10}{money(g["cost"]):>10}  '
               + ", ".join(f"{HARNESSES.get(c, c)}={human(t)}" for c, t in g["via"].items()))
