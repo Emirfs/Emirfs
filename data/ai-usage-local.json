@@ -1846,9 +1846,9 @@
    "date": "2026-11-18",
    "client": "omp",
    "model": "claude-opus-5-5",
-   "tokens": 46417914,
-   "cost": 14.75173,
-   "messages": 216
+   "tokens": 48830523,
+   "cost": 15.348882,
+   "messages": 222
   },
   {
    "date": "2026-11-18",

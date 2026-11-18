@@ -308,8 +308,12 @@ def render(rows: list[dict], server_end: str, collected: str | None) -> str:
     return "\n".join(out) + "\n"
 
 
-def gh(*args: str, check: bool = True) -> subprocess.CompletedProcess:
-    return subprocess.run(["gh", *args], capture_output=True, encoding="utf-8", errors="replace", check=check)
+def gh(*args: str, check: bool = True, body: dict | None = None) -> subprocess.CompletedProcess:
+    done = subprocess.run(["gh", *args], capture_output=True, encoding="utf-8", errors="replace",
+                          input=json.dumps(body) if body is not None else None)
+    if check and done.returncode:
+        raise SystemExit(f"gh {' '.join(args[:3])} failed: {done.stderr.strip()[-300:]}")
+    return done
 
 
 def publish() -> None:
@@ -326,10 +330,12 @@ def publish() -> None:
     if current == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest():
         print("publish: unchanged")
         return
-    args = ["api", "-X", "PUT", f"{repo}/contents/{path}", "-f", f"branch={DATA_BRANCH}",
-            "-f", f"message=chore(usage): yerel kullanım kaydı {date.today().isoformat()}",
-            "-f", "content=" + base64.b64encode(data).decode("ascii")]
-    gh(*args, *(["-f", f"sha={current}"] if current else []))
+    body = {"branch": DATA_BRANCH, "message": f"chore(usage): yerel kullanım kaydı {date.today().isoformat()}",
+            "content": base64.b64encode(data).decode("ascii")}
+    if current:
+        body["sha"] = current
+    # The content goes on stdin: the snapshot's base64 is past Windows' command-line limit.
+    gh("api", "-X", "PUT", f"{repo}/contents/{path}", "--input", "-", body=body)
     gh("workflow", "run", "ai-usage.yml", "-R", f"{USER}/{USER}", "--ref", "main")
     print(f"publish: {DATA_BRANCH} updated, card render requested")
 
