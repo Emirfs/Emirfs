@@ -1,6 +1,6 @@
 {
  "since": "2026-08-29",
- "collected": "2026-11-17",
+ "collected": "2026-11-18",
  "rows": [
   {
    "date": "2026-09-02",
@@ -231,7 +231,7 @@
    "client": "codex",
    "model": "openrouter/deepseek-v4.1-flash",
    "tokens": 110857764,
-   "cost": 0.922906,
+   "cost": 2.254196,
    "messages": 300
   },
   {
@@ -303,7 +303,7 @@
    "client": "codex",
    "model": "openrouter/deepseek-v4.1-flash",
    "tokens": 237999144,
-   "cost": 1.91325,
+   "cost": 4.669413,
    "messages": 466
   },
   {
@@ -1256,7 +1256,7 @@
    "model": "claude-haiku-5-5",
    "tokens": 5792793,
    "cost": 0.135463,
-   "messages": 457
+   "messages": 458
   },
   {
    "date": "2026-10-26",
@@ -1270,9 +1270,9 @@
    "date": "2026-10-26",
    "client": "hermes",
    "model": "gpt-6.1-sol",
-   "tokens": 29911270,
-   "cost": 10.88691,
-   "messages": 118
+   "tokens": 29985276,
+   "cost": 10.95336,
+   "messages": 128
   },
   {
    "date": "2026-10-26",
@@ -1502,9 +1502,9 @@
    "date": "2026-11-04",
    "client": "hermes",
    "model": "claude-opus-5-5",
-   "tokens": 8845576,
-   "cost": 6.41535,
-   "messages": 66
+   "tokens": 10240693,
+   "cost": 8.712455,
+   "messages": 132
   },
   {
    "date": "2026-11-04",
@@ -1518,9 +1518,9 @@
    "date": "2026-11-04",
    "client": "hermes",
    "model": "gpt-6.1-sol",
-   "tokens": 22800597,
-   "cost": 7.601676,
-   "messages": 593
+   "tokens": 23290099,
+   "cost": 8.000849,
+   "messages": 659
   },
   {
    "date": "2026-11-04",
@@ -1598,8 +1598,8 @@
    "date": "2026-11-05",
    "client": "hermes",
    "model": "claude-opus-5-5",
-   "tokens": 68116756,
-   "cost": 37.84846,
+   "tokens": 68203861,
+   "cost": 37.993061,
    "messages": 310
   },
   {
@@ -1614,8 +1614,8 @@
    "date": "2026-11-05",
    "client": "hermes",
    "model": "gpt-6.1-sol",
-   "tokens": 9873134,
-   "cost": 3.046847,
+   "tokens": 9902567,
+   "cost": 3.105761,
    "messages": 0
   },
   {
@@ -1670,8 +1670,8 @@
    "date": "2026-11-06",
    "client": "hermes",
    "model": "claude-opus-5-5",
-   "tokens": 85647600,
-   "cost": 44.324576,
+   "tokens": 85735155,
+   "cost": 44.469925,
    "messages": 299
   },
   {
@@ -1686,9 +1686,9 @@
    "date": "2026-11-06",
    "client": "hermes",
    "model": "gpt-6.1-sol",
-   "tokens": 14626637,
-   "cost": 8.648925,
-   "messages": 606
+   "tokens": 14656237,
+   "cost": 8.708181,
+   "messages": 814
   },
   {
    "date": "2026-11-06",
@@ -1734,9 +1734,9 @@
    "date": "2026-11-16",
    "client": "hermes",
    "model": "gpt-6.1-sol",
-   "tokens": 35200144,
+   "tokens": 35198933,
    "cost": 11.955916,
-   "messages": 398
+   "messages": 412
   },
   {
    "date": "2026-11-16",
@@ -1774,33 +1774,97 @@
    "date": "2026-11-17",
    "client": "hermes",
    "model": "claude-haiku-5-5",
-   "tokens": 114085,
-   "cost": 0.007068,
+   "tokens": 1740749,
+   "cost": 0.089072,
+   "messages": 30
+  },
+  {
+   "date": "2026-11-17",
+   "client": "hermes",
+   "model": "gpt-6-luna",
+   "tokens": 13818,
+   "cost": 0.001386,
    "messages": 10
+  },
+  {
+   "date": "2026-11-17",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 16114037,
+   "cost": 6.936804,
+   "messages": 179
   },
   {
    "date": "2026-11-17",
    "client": "omp",
    "model": "claude-haiku-5-5",
-   "tokens": 1452709,
-   "cost": 0.077545,
-   "messages": 29
+   "tokens": 4715353,
+   "cost": 0.24517,
+   "messages": 99
   },
   {
    "date": "2026-11-17",
    "client": "omp",
    "model": "claude-opus-5-5",
-   "tokens": 254222442,
-   "cost": 84.212138,
-   "messages": 1264
+   "tokens": 469931794,
+   "cost": 163.844711,
+   "messages": 2385
+  },
+  {
+   "date": "2026-11-17",
+   "client": "omp",
+   "model": "gpt-5.6-luna",
+   "tokens": 668671,
+   "cost": 0.046529,
+   "messages": 16
   },
   {
    "date": "2026-11-17",
    "client": "omp",
    "model": "gpt-6.1-sol",
-   "tokens": 27678940,
-   "cost": 5.497862,
-   "messages": 185
+   "tokens": 52869291,
+   "cost": 9.787372,
+   "messages": 375
+  },
+  {
+   "date": "2026-11-18",
+   "client": "hermes",
+   "model": "claude-haiku-5-5",
+   "tokens": 2076189,
+   "cost": 0.068378,
+   "messages": 79
+  },
+  {
+   "date": "2026-11-18",
+   "client": "hermes",
+   "model": "gpt-6.1-sol",
+   "tokens": 9303494,
+   "cost": 5.140818,
+   "messages": 130
+  },
+  {
+   "date": "2026-11-18",
+   "client": "omp",
+   "model": "claude-opus-5-5",
+   "tokens": 46417914,
+   "cost": 14.75173,
+   "messages": 216
+  },
+  {
+   "date": "2026-11-18",
+   "client": "omp",
+   "model": "claude-sonnet-5-5",
+   "tokens": 8709264,
+   "cost": 2.995843,
+   "messages": 71
+  },
+  {
+   "date": "2026-11-18",
+   "client": "omp",
+   "model": "gpt-6.2-sol",
+   "tokens": 20949757,
+   "cost": 3.726508,
+   "messages": 148
   }
  ]
 }
