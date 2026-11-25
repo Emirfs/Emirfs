@@ -17,11 +17,11 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <rect x=".5" y=".5" width="859" height="411" rx="13.5" fill="none" stroke="#30363D"/>
 <text x="32" y="44" class="t">AI tokens by model vendor</text>
 <text x="32" y="66" class="s">Tokscale submissions to 2026-11-25</text>
-<text x="32" y="112" class="k">20.07B</text>
+<text x="32" y="112" class="k">20.18B</text>
 <text x="32" y="132" class="kl">TOTAL TOKENS</text>
-<text x="232" y="112" class="k">$8.27K</text>
+<text x="232" y="112" class="k">$8.31K</text>
 <text x="232" y="132" class="kl">API-EQUIVALENT COST</text>
-<text x="432" y="112" class="k">122,647</text>
+<text x="432" y="112" class="k">123,150</text>
 <text x="432" y="132" class="kl">MODEL RESPONSES</text>
 <text x="632" y="112" class="k">142</text>
 <text x="632" y="132" class="kl">ACTIVE DAYS</text>
@@ -33,8 +33,8 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <rect x="250" y="160" width="420" height="14" rx="7" fill="#161B22"/>
 <rect class="bar" style="animation-delay:0.15s" x="250" y="160" width="420.0" height="14" rx="7" fill="#D97757"/>
 <g class="fade" style="animation-delay:0.15s">
-<text x="688" y="174" class="val">14.89B</text>
-<text x="688" y="192" class="v">74.2% · $6.40K</text>
+<text x="688" y="174" class="val">15.01B</text>
+<text x="688" y="192" class="v">74.4% · $6.44K</text>
 </g>
 <g class="fade" style="animation-delay:0.27s">
 <circle cx="38" cy="220" r="6" fill="#10A37F"/>
@@ -42,10 +42,10 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="54" y="242" class="v">via Oh My Pi, Codex CLI, Hermes Agent</text>
 </g>
 <rect x="250" y="210" width="420" height="14" rx="7" fill="#161B22"/>
-<rect class="bar" style="animation-delay:0.27s" x="250" y="210" width="93.7" height="14" rx="7" fill="#10A37F"/>
+<rect class="bar" style="animation-delay:0.27s" x="250" y="210" width="93.0" height="14" rx="7" fill="#10A37F"/>
 <g class="fade" style="animation-delay:0.27s">
 <text x="688" y="224" class="val">3.32B</text>
-<text x="688" y="242" class="v">16.6% · $1.59K</text>
+<text x="688" y="242" class="v">16.5% · $1.59K</text>
 </g>
 <g class="fade" style="animation-delay:0.39s">
 <circle cx="38" cy="270" r="6" fill="#4E8CF7"/>
@@ -53,10 +53,10 @@ text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <text x="54" y="292" class="v">via Oh My Pi, Pi, Antigravity CLI</text>
 </g>
 <rect x="250" y="260" width="420" height="14" rx="7" fill="#161B22"/>
-<rect class="bar" style="animation-delay:0.39s" x="250" y="260" width="42.4" height="14" rx="7" fill="#4E8CF7"/>
+<rect class="bar" style="animation-delay:0.39s" x="250" y="260" width="42.0" height="14" rx="7" fill="#4E8CF7"/>
 <g class="fade" style="animation-delay:0.39s">
 <text x="688" y="274" class="val">1.50B</text>
-<text x="688" y="292" class="v">7.5% · $278</text>
+<text x="688" y="292" class="v">7.4% · $278</text>
 </g>
 <g class="fade" style="animation-delay:0.51s">
 <circle cx="38" cy="320" r="6" fill="#6C8CFF"/>
